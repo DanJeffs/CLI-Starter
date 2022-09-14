@@ -235,3 +235,7 @@ eval "$(starship init zsh)"
 #       (it should give you an explicit "source ..." line to add)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# ########################### --Credentials-- ########################## #
+# a file stored separately to store credentials and API keys such as those for github access.
+. $HOME/.cred/shcred
