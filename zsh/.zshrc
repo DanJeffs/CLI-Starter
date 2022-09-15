@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # ~~~~~~~~ --order of sourcing-- ~~~~~~~~ #
 # (ignoring /etc/* files)
 # $ZDOTDIR/.zshenv
@@ -226,7 +233,10 @@ export FZF_DEFAULT_OPTS='--multi --preview "bat --style=numbers --color=always -
 #PROMPT="%F{cyan}%n %1~ %# %f"
 
 # Starship.rs initializer (to be at "end" of file, along with the following line)
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
+
+#P10k
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
 # ########################### --ZSH Input Mods-- ####################### #
@@ -238,4 +248,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ########################### --Credentials-- ########################## #
 # a file stored separately to store credentials and API keys such as those for github access.
-. $HOME/.cred/shcred
+source $HOME/.cred/shcred
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

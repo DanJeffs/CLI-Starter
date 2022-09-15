@@ -18,13 +18,14 @@ return {
     \\ =~ !~ {. .} .= :- ._ /= =< <<= <<== || && |= =| Fl Tl fi fj ft qu Qu  ]]
     -- font = wezterm.font("Anonymous Pro"), --[[solid; no ligatures]]
     -- font = wezterm.font("Iosevka"), --[[elegant and horizontally efficient; MANY custom versions]]
-    font = wezterm.font("Iosevka Slab"), --[[elegant and horizontally efficient; MANY custom versions]]
+    -- font = wezterm.font("Iosevka Slab"), --[[elegant and horizontally efficient; MANY custom versions]]
     -- font = wezterm.font("JetBrains Mono"),  --[[default; solid, but .0]]
     -- font = wezterm.font("Major Mono Display"),  --[[fun]]
     -- font = wezterm.font("Monoflow"), --[[monospace kerning control via ligatures, uses .0]]
     -- font = wezterm.font("Syne Mono"), --[[quasi-modernist; 0=~=O]]
     -- font = wezterm.font("Victor Mono"), --[[strong cursive comments=>very parsable commented code; but .0]]
-    font_size = 20,
+    font = wezterm.font("MesloLGS NF"),
+    font_size = 16,
 
     --[terminal colorschemes]
     -- see more at: https://wezfurlong.org/wezterm/colorschemes/index.html
